@@ -56,21 +56,29 @@ there is specific evidence connecting them to self-improvement capability.
 
 ## Artifact Availability
 
-Entries that report evaluations should state which artifacts are public.
+Every entry that rests on an evaluation must state which artifacts are public. The status classifies the artifacts behind the claim the entry makes, not an arbitrary experiment from the same paper.
 
-Open
-The task set or generative task source, scoring logic, and evaluation harness
-needed to rerun the evaluation are publicly available.
+The reproducibility artifact set has five components: the task set or generative task source; the scoring logic; the evaluation harness; the data or checkpoints; and the execution environment, including any required non-public infrastructure.
 
-Partial
-Some important artifacts are public, but a material part of the data,
-infrastructure, evaluation set, or execution environment is unavailable.
+**Publicly available** means retrievable by anyone through a stable locator (URL, DOI, release tag) without an access request, email gate, payment, licence negotiation, or institutional affiliation.
 
-Internal
-The reported evaluation materially depends on non-public tasks or infrastructure.
+Decide in this order:
 
-Not applicable
-The resource does not report an evaluation requiring reproducibility artifacts.
+1. **Not applicable** — the resource reports no evaluation whose rerun depends on this artifact set. Surveys, position papers, and theory papers that illustrate rather than evaluate qualify. A paper that reports an experiment on a public dataset does not.
+2. **Open** — every component the reported evaluation actually requires is publicly available.
+3. **Internal** — an independent party cannot reproduce any meaningful part of the reported evaluation using only public artifacts. Evaluations that depend on non-public task sets or non-public infrastructure are always Internal, however much ancillary code is released.
+4. **Partial** — everything else: some components are public and a material part is not, but the public part still supports some meaningful, independently checkable part of the evaluation.
+
+The decisive test for Partial vs Internal: using only public artifacts, can an independent party rerun or meaningfully check some part of the reported evaluation? Yes → Partial. No → Internal.
+
+Two guard rails:
+
+- Classify by the strongest claim that can be independently checked, not by intent or by how much code was released. Shipping a training library while withholding the evaluation does not make an entry Partial.
+- Defaults run downward. A claim of Open or Partial that cites no specific public locator, and does not name the non-public components, is set to the lower level until evidence is supplied.
+
+A submission must state the status; a locator for each public component; what each missing component is and why it is unavailable; and any evaluation the resource itself flags as non-reproducible.
+
+Status is recorded in the submission metadata. Entries in this README do not carry status markers; where reproducibility is materially limited, state that plainly in the entry description instead.
 
 ## Entry Format
 
