@@ -69,6 +69,24 @@ For this list, we use the following operational distinctions:
 
 **RSI substrate** — exposes an agent's own structure as a modifiable object, but does not necessarily form an automatic self-improvement loop by default.
 
+<!--lint disable no-emphasis-as-heading-->
+
+**Evidence of self-improvement**
+
+<!--lint enable no-emphasis-as-heading-->
+
+Evidence should be distinguished at three levels:
+
+**Task gain** — The system produces better task outputs or scores, without necessarily demonstrating a persistent change to the system.
+
+**Retained gain** — A persistent update to weights, memory, skills, prompts, harness, or code improves future performance, preferably demonstrated on independent or held-out tasks.
+
+**Improver gain** — A modification to the improvement-producing mechanism enables it to generate more effective subsequent updates, supported by controlled comparisons under comparable resource budgets.
+
+**Structural recursion vs. demonstrated improvement** — A recursive dependency or self-referential architecture does not by itself establish that the improvement mechanism has become more effective.
+
+For each system, relevant cross-cutting dimensions include the update target, feedback source, retained artifact, externally fixed conditions, and validation method.
+
 ## Fundamentals & Getting Started
 
 Foundational papers, formal treatments, and surveys that establish the vocabulary and core questions of RSI.

@@ -20,6 +20,25 @@ Canonical enabling works may be included when they establish a mechanism that is
 
 Resources about the financial Relative Strength Index are out of scope.
 
+## Evidence of Self-Improvement
+
+When a resource claims persistent or recursive self-improvement, submissions should explain what evidence supports the claim.
+
+Relevant evidence may include:
+
+- Task-level performance improvements against an appropriate baseline.
+- Persistence of modifications across subsequent tasks or iterations.
+- Performance on independent or held-out evaluations.
+- Comparisons between original and modified improvement procedures.
+- Resource-controlled comparisons covering inference cost, compute, tools, data, and external assistance.
+- Multi-round results demonstrating whether improvements remain useful or transfer to new tasks.
+
+A self-referential architecture, repeated optimization loop, or increasing task score is insufficient on its own to establish improved update capability.
+
+Claims of improver gain should distinguish improvements to the task-solving system from improvements to the mechanism responsible for producing future system updates.
+
+When evidence is incomplete, the resource may still be included if it satisfies the existing inclusion criteria, but its description must not overstate the demonstrated result.
+
 ## Benchmark and Capability Proxy Admission
 
 General capability benchmarks are out of scope unless they measure a bottleneck
